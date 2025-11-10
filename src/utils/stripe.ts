@@ -1,4 +1,5 @@
 import { type Stripe, loadStripe } from "@stripe/stripe-js";
+import Stripe from "stripe";
 
 let stripePromise: Promise<Stripe | null>;
 
@@ -9,4 +10,6 @@ export const getStripe = () => {
   return stripePromise;
 };
 
-export const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: "2024-12-18.acacia",
+});

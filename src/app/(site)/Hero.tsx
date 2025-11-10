@@ -49,10 +49,12 @@ const HeroSection = () => {
                 "https://pbs.twimg.com/profile_images/1870096957370445827/PQrjfHGt_400x400.jpg",
                 "https://pbs.twimg.com/profile_images/1850639995444371456/9rbx-lYe_400x400.jpg",
               ].map((avatar, index) => (
-                <img
+                <Image
                   key={index}
                   src={avatar || "/placeholder.svg"}
                   alt={`User ${index + 1}`}
+                  width={40}
+                  height={40}
                   className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-zinc-900"
                 />
               ))}

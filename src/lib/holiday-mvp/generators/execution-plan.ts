@@ -23,7 +23,7 @@ export function generateExecutionPlan(
     success_metrics: generateSuccessMetrics(input, isHighVolume),
     saturday_schedule: generateSaturdaySchedule(input),
     sunday_schedule: generateSundaySchedule(input),
-    roles: generateRoles(input),
+    roles: generateRoles(),
     publication_checklist: generatePublicationChecklist(input),
     distribution_plan: generateDistributionPlan(input),
     experiments: generateExperiments(input, isHighVolume),
@@ -196,7 +196,7 @@ function generateSundaySchedule(input: GeneratorInput): ScheduleBlock[] {
   return schedule;
 }
 
-function generateRoles(input: GeneratorInput): string[] {
+function generateRoles(): string[] {
   return [
     "**PM (Product Manager)**: Define oferta, pricing, coordina equipo, toma decisión GO/KILL",
     "**Content**: Redacta copys, crea creativos, genera contenido de productos",

@@ -23,7 +23,6 @@ export function generateLandingSpec(input: GeneratorInput): LandingSpec {
 
   // Validar y usar defaults
   const tone = input.tone_voice || "profesional y cercano";
-  const goal = input.primary_goal || "pre-ventas";
   const baseUrl = "https://tudominio.com"; // TODO: configurar
 
   if (!input.brand_constraints) {
