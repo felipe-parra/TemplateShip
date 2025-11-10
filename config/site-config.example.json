@@ -1,0 +1,306 @@
+{
+  "$schema": "../src/types/site-config.ts",
+  "company": {
+    "name": "MyStartup",
+    "domain": "https://mystartup.com",
+    "description": "Building the next generation of AI-powered tools",
+    "tagline": "Build smarter, ship faster",
+    "email": "hello@mystartup.com",
+    "twitter": "mystartup",
+    "github": "mystartup/product",
+    "discord": "https://discord.gg/mystartup",
+    "linkedin": "mystartup",
+    "mailgun": {
+      "subdomain": "mg",
+      "fromNoReply": "MyStartup <noreply@mystartup.com>",
+      "fromAdmin": "Team MyStartup <team@mystartup.com>",
+      "supportEmail": "support@mystartup.com",
+      "forwardRepliesTo": "support@mystartup.com"
+    }
+  },
+  "seo": {
+    "global": {
+      "title": "MyStartup - AI-Powered Development Tools",
+      "description": "Build smarter and ship faster with MyStartup's AI-powered development tools",
+      "keywords": [
+        "ai",
+        "development tools",
+        "saas",
+        "productivity",
+        "automation"
+      ],
+      "ogImage": "/og-mystartup.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterHandle": "mystartup"
+    },
+    "pages": {
+      "home": {
+        "title": "MyStartup - Build Smarter, Ship Faster",
+        "description": "Leverage AI to accelerate your development workflow and ship products faster than ever."
+      }
+    }
+  },
+  "branding": {
+    "colors": {
+      "primary": "#6366F1",
+      "secondary": "#1E293B",
+      "accent": "#F59E0B",
+      "background": "#0F172A",
+      "foreground": "#F8FAFC",
+      "muted": "#64748B",
+      "border": "#334155",
+      "card": "#1E293B",
+      "success": "#10B981",
+      "error": "#EF4444"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter"
+    },
+    "logo": {
+      "light": "/mystartup-logo-light.svg",
+      "dark": "/mystartup-logo-dark.svg",
+      "alt": "MyStartup Logo",
+      "width": 180,
+      "height": 45
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Build Smarter, Ship Faster with AI",
+      "subtitle": "🚀 MyStartup",
+      "description": "Transform your development workflow with AI-powered tools. Go from idea to production in days, not months.",
+      "cta": {
+        "text": "Start Building Free",
+        "href": "/signup",
+        "icon": "Rocket"
+      },
+      "secondaryCta": {
+        "text": "Watch Demo",
+        "href": "/demo"
+      },
+      "socialProof": {
+        "avatars": [
+          "https://randomuser.me/api/portraits/men/1.jpg",
+          "https://randomuser.me/api/portraits/women/2.jpg",
+          "https://randomuser.me/api/portraits/men/3.jpg"
+        ],
+        "text": "Trusted by 5,000+ developers"
+      }
+    },
+    "features": [
+      {
+        "id": "ai-coding",
+        "title": "AI-Powered Coding",
+        "description": "Write code 10x faster with intelligent AI assistance",
+        "icon": "Code",
+        "enabled": true
+      },
+      {
+        "id": "auto-testing",
+        "title": "Automated Testing",
+        "description": "Generate comprehensive test suites automatically",
+        "icon": "CheckCircle",
+        "enabled": true
+      },
+      {
+        "id": "deployment",
+        "title": "One-Click Deployment",
+        "description": "Deploy to any cloud platform with a single click",
+        "icon": "Cloud",
+        "enabled": true
+      }
+    ],
+    "pricing": {
+      "title": "Simple, transparent pricing",
+      "subtitle": "Start free, scale as you grow",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Starter",
+          "description": "Perfect for solo developers",
+          "price": 0,
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "5 AI-assisted projects",
+            "100 API calls/month",
+            "Community support",
+            "Basic analytics"
+          ],
+          "cta": {
+            "text": "Get Started Free",
+            "href": "/signup"
+          },
+          "enabled": true
+        },
+        {
+          "id": "pro",
+          "name": "Professional",
+          "description": "For growing teams",
+          "price": 49,
+          "currency": "USD",
+          "interval": "month",
+          "features": [
+            "Unlimited projects",
+            "10,000 API calls/month",
+            "Priority support",
+            "Advanced analytics",
+            "Team collaboration",
+            "Custom integrations"
+          ],
+          "cta": {
+            "text": "Start Pro Trial",
+            "href": "/signup?plan=pro"
+          },
+          "popular": true,
+          "enabled": true
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "id": "sarah",
+        "name": "Sarah Chen",
+        "role": "CTO at TechCorp",
+        "text": "MyStartup cut our development time in half. The AI assistance is game-changing.",
+        "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 5,
+        "enabled": true
+      }
+    ],
+    "faq": [
+      {
+        "id": "trial",
+        "question": "Do you offer a free trial?",
+        "answer": "Yes! Our Starter plan is free forever, and you can try Pro features with a 14-day free trial.",
+        "enabled": true
+      }
+    ],
+    "cta": {
+      "title": "Ready to Transform Your Workflow?",
+      "description": "Join thousands of developers building better software with AI",
+      "cta": {
+        "text": "Get Started Free",
+        "href": "/signup"
+      }
+    },
+    "footer": {
+      "tagline": "Building the future of development",
+      "copyright": "© 2025 MyStartup Inc. All rights reserved.",
+      "links": [
+        {
+          "title": "Product",
+          "items": [
+            { "label": "Features", "href": "/#features" },
+            { "label": "Pricing", "href": "/#pricing" },
+            { "label": "Roadmap", "href": "/roadmap" }
+          ]
+        }
+      ],
+      "social": {
+        "twitter": "https://x.com/mystartup",
+        "github": "https://github.com/mystartup"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "enabled": true,
+      "sections": [
+        { "id": "navbar", "component": "Navbar", "enabled": true, "order": 0 },
+        { "id": "hero", "component": "HeroSection", "enabled": true, "order": 1 },
+        { "id": "features", "component": "Features", "enabled": true, "order": 2 },
+        { "id": "pricing", "component": "PricingSection", "enabled": true, "order": 3 },
+        { "id": "testimonials", "component": "TestimonialsPage", "enabled": true, "order": 4 },
+        { "id": "faq", "component": "FAQ", "enabled": true, "order": 5 },
+        { "id": "cta", "component": "CTA", "enabled": true, "order": 6 },
+        { "id": "footer", "component": "Footer", "enabled": true, "order": 7 }
+      ]
+    },
+    "pricing": { "enabled": true },
+    "dashboard": { "enabled": true },
+    "docs": { "enabled": true },
+    "blog": { "enabled": true },
+    "privacyPolicy": { "enabled": true },
+    "termsOfService": { "enabled": true }
+  },
+  "routes": {
+    "home": "/",
+    "pricing": "/pricing",
+    "dashboard": "/dashboard",
+    "login": "/login",
+    "register": "/signup",
+    "docs": "/docs",
+    "blog": "/blog",
+    "privacyPolicy": "/privacy",
+    "termsOfService": "/terms"
+  },
+  "features": {
+    "authentication": {
+      "enabled": true,
+      "providers": {
+        "google": true,
+        "github": true,
+        "magicLink": true
+      }
+    },
+    "payments": {
+      "enabled": true,
+      "providers": {
+        "stripe": true,
+        "lemonSqueezy": false
+      }
+    },
+    "email": {
+      "enabled": true,
+      "provider": "mailgun"
+    },
+    "analytics": {
+      "enabled": true,
+      "provider": "plausible"
+    },
+    "blog": {
+      "enabled": true
+    },
+    "docs": {
+      "enabled": true
+    }
+  },
+  "projects": [
+    {
+      "id": "ai-code-assistant",
+      "name": "AI Code Assistant",
+      "description": "Intelligent coding companion powered by GPT-4",
+      "image": "/projects/ai-assistant.png",
+      "url": "https://mystartup.com/ai-assistant",
+      "github": "https://github.com/mystartup/ai-assistant",
+      "tags": ["ai", "vscode", "productivity"],
+      "featured": true,
+      "enabled": true
+    }
+  ],
+  "products": [
+    {
+      "id": "pro-plan",
+      "name": "MyStartup Pro",
+      "description": "Full platform access with premium features",
+      "price": 49,
+      "currency": "USD",
+      "features": [
+        "Unlimited projects",
+        "10,000 API calls/month",
+        "Priority support",
+        "Advanced analytics"
+      ],
+      "cta": {
+        "text": "Upgrade to Pro",
+        "href": "/signup?plan=pro"
+      },
+      "stripeProductId": "prod_xxxxx",
+      "featured": true,
+      "enabled": true
+    }
+  ]
+}

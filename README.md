@@ -6,6 +6,7 @@ ShipFree is a free alternative to ShipFast, designed to simplify and optimize yo
 
 ## Features
 
+- **🎨 JSON Configuration System** - Customize everything via a single JSON file
 - SEO Optimisation
 - User authentication with Supabase
 - Stripe and LemonSqueezy integration
@@ -32,6 +33,37 @@ node scripts/generate-holiday-mvp.mjs --brand="Your Brand" --products=plantillas
 ```
 
 📚 **Full Documentation**: See [HOLIDAY_MVP_GENERATOR.md](HOLIDAY_MVP_GENERATOR.md) for detailed usage, examples, and customization.
+
+## 🎨 JSON Configuration System
+
+Customize your entire site through a single JSON configuration file - no code changes needed!
+
+```json
+{
+  "company": {
+    "name": "YourStartup",
+    "domain": "https://yourstartup.com"
+  },
+  "branding": {
+    "colors": {
+      "primary": "#FFBE1A"
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Your Custom Title"
+    }
+  }
+}
+```
+
+📚 **Configuration Guide**: See [CONFIG.md](CONFIG.md) for complete documentation on customizing:
+- Company info and branding
+- SEO metadata for all pages
+- Content (hero, features, pricing, testimonials, FAQs)
+- Colors, fonts, and images
+- Routes and page visibility
+- Projects and products
 
 ## Docs
 

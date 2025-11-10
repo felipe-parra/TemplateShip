@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "validate-config": "node scripts/validate-config.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.2",
