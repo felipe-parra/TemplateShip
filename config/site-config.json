@@ -235,7 +235,7 @@
     ],
     "faq": [
       {
-        "id": "free",
+        "id": "is-free",
         "question": "Is this really free?",
         "answer": "Yes! ShipFree is open-source and community-driven. Use it for unlimited projects, no strings attached.",
         "enabled": true
@@ -259,7 +259,7 @@
         "enabled": true
       },
       {
-        "id": "database",
+        "id": "database-support",
         "question": "Does ShipFree include a database?",
         "answer": "Yes! It supports MongoDB and Supabase out of the box.",
         "enabled": true
