@@ -1,0 +1,522 @@
+{
+  "company": {
+    "name": "ShipFree",
+    "domain": "https://shipfree.idee8.agency",
+    "description": "Open Source Alternative to ShipFast - Launch your startup in days Not in weeks",
+    "tagline": "Ship your startup in days, not weeks",
+    "email": "hi@idee8.agency",
+    "twitter": "idee8agency",
+    "github": "idee8/shipfree",
+    "discord": "",
+    "linkedin": "",
+    "mailgun": {
+      "subdomain": "mg",
+      "fromNoReply": "ShipFree <noreply@ag.shipfree.com>",
+      "fromAdmin": "Idee8 at ShipFree <idee8@ag.shipfree.com>",
+      "supportEmail": "idee8@mg.shipfree.com",
+      "forwardRepliesTo": "shipfree@gmail.com"
+    }
+  },
+  "seo": {
+    "global": {
+      "title": "ShipFree - Open Source SaaS Boilerplate",
+      "description": "Open Source Alternative to ShipFast - Launch your startup in days Not in weeks",
+      "keywords": [
+        "saas",
+        "boilerplate",
+        "open source",
+        "free",
+        "open source shipfast",
+        "shipfree",
+        "idee8",
+        "made by idee8",
+        "free boilerplate",
+        "github"
+      ],
+      "ogImage": "/og-image.png",
+      "ogType": "website",
+      "twitterCard": "summary_large_image",
+      "twitterHandle": "idee8agency"
+    },
+    "pages": {
+      "home": {
+        "title": "ShipFree - Ship your startup in days",
+        "description": "Tired of wasting time on setup instead of building? ShipFree is the fastest way to launch your SaaS, AI tool, or web app—for free."
+      },
+      "pricing": {
+        "title": "Pricing - ShipFree",
+        "description": "ShipFree is 100% free forever. No credit card required. Start building your SaaS today."
+      },
+      "dashboard": {
+        "title": "Dashboard - ShipFree",
+        "description": "Manage your ShipFree projects and settings."
+      },
+      "docs": {
+        "title": "Documentation - ShipFree",
+        "description": "Complete documentation for ShipFree - Learn how to build and ship your startup faster."
+      }
+    }
+  },
+  "branding": {
+    "colors": {
+      "primary": "#FFBE1A",
+      "secondary": "#212121",
+      "accent": "#CFCFCF",
+      "background": "#0F0F0F",
+      "foreground": "#FFFFFF",
+      "muted": "#71717A",
+      "border": "#27272A",
+      "card": "#18181B",
+      "success": "#22C55E",
+      "error": "#EF4444"
+    },
+    "fonts": {
+      "heading": "Bricolage Grotesque",
+      "body": "Bricolage Grotesque"
+    },
+    "logo": {
+      "light": "/logo-light.svg",
+      "dark": "/logo-dark.svg",
+      "alt": "ShipFree Logo",
+      "width": 150,
+      "height": 40
+    }
+  },
+  "content": {
+    "hero": {
+      "title": "Ship your startup in days, not weeks",
+      "subtitle": "⚡ ShipFree",
+      "description": "Tired of wasting time on setup instead of building? ShipFree is the fastest way to launch your SaaS, AI tool, or web app—for free. No setup headaches, no paywalls—just build and ship!",
+      "cta": {
+        "text": "Get ShipFree",
+        "href": "https://github.com/idee8/shipfree",
+        "icon": "Zap"
+      },
+      "socialProof": {
+        "avatars": [
+          "https://pbs.twimg.com/profile_images/1490075268928655364/L-PTx3nW_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/1855635236509388800/PFMQ949e_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/933422170499371008/drhhIn0z_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/1870096957370445827/PQrjfHGt_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/1850639995444371456/9rbx-lYe_400x400.jpg"
+        ],
+        "text": "Join 1,000+ developers who shipped faster"
+      }
+    },
+    "features": [
+      {
+        "id": "nextjs",
+        "title": "NextJS Boilerplate",
+        "description": "Built with Next.js 15, React 19, and TypeScript for modern web development",
+        "icon": "Zap",
+        "enabled": true
+      },
+      {
+        "id": "auth",
+        "title": "Authentication",
+        "description": "Google OAuth and Magic Links powered by Supabase",
+        "icon": "Lock",
+        "enabled": true
+      },
+      {
+        "id": "payments",
+        "title": "Payment Integration",
+        "description": "Stripe and LemonSqueezy integration out of the box",
+        "icon": "CreditCard",
+        "enabled": true
+      },
+      {
+        "id": "email",
+        "title": "Email Service",
+        "description": "Mailgun integration for transactional emails",
+        "icon": "Mail",
+        "enabled": true
+      },
+      {
+        "id": "database",
+        "title": "Database",
+        "description": "MongoDB and Supabase support included",
+        "icon": "Database",
+        "enabled": true
+      },
+      {
+        "id": "ui",
+        "title": "UI Components",
+        "description": "Beautiful components with Tailwind CSS and animations",
+        "icon": "Palette",
+        "enabled": true
+      }
+    ],
+    "pricing": {
+      "title": "Save hours of repetitive code, ship fast, get profitable!",
+      "subtitle": "100% Free Forever!",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Community Edition",
+          "description": "Everything you need to build and launch your startup",
+          "price": 0,
+          "currency": "USD",
+          "interval": "forever",
+          "features": [
+            "NextJS boilerplate",
+            "SEO & Blog",
+            "Mailgun emails",
+            "Stripe / Lemon Squeezy",
+            "MongoDB / Supabase",
+            "Google OAuth & Magic Links",
+            "Components & animations",
+            "ChatGPT prompts for terms & privacy",
+            "Discord community access",
+            "Regular updates"
+          ],
+          "cta": {
+            "text": "Get Started Now",
+            "href": "https://github.com/idee8/shipfree"
+          },
+          "popular": true,
+          "enabled": true
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "id": "jack",
+        "name": "Jack F.",
+        "role": "Maker",
+        "text": "I launched my startup in just a day and made my first $100 online! The setup was effortless, I was up and running faster than I ever imagined",
+        "avatar": "https://pbs.twimg.com/profile_images/1784563357300740096/2DyzEa9d_400x400.jpg",
+        "rating": 5,
+        "enabled": true
+      },
+      {
+        "id": "larry",
+        "name": "Larry",
+        "role": "Founder",
+        "text": "No more overthinking or endless configurations. Just clone, tweak, and launch. ShipFree made everything seamless and stress-free!",
+        "avatar": "https://pbs.twimg.com/profile_images/1804234365817212928/n077GepN_400x400.jpg",
+        "rating": 5,
+        "enabled": true
+      },
+      {
+        "id": "gabriel",
+        "name": "Gabriel",
+        "role": "Developer",
+        "text": "ShipFree is hands down the best open-source SaaS boilerplate! It's the ultimate launchpad for startups looking to move fast and break barriers.",
+        "avatar": "https://pbs.twimg.com/profile_images/1757317042644918272/z22hY3Ji_400x400.jpg",
+        "enabled": true
+      },
+      {
+        "id": "yitai",
+        "name": "Yitai Goh",
+        "role": "Entrepreneur",
+        "text": "Without ShipFree, I'd still be wrestling with Stripe and email configurations! It saved me countless hours and let me scale effortlessly. ⚡️",
+        "avatar": "https://pbs.twimg.com/profile_images/1761628238323802112/pXIc00nu_400x400.jpg",
+        "rating": 4,
+        "enabled": true
+      },
+      {
+        "id": "matt",
+        "name": "Matt Merrick",
+        "role": "Founder",
+        "text": "I launched with ShipFree boilerplate and have landed 5 new customers! Thanks @idee8agency",
+        "avatar": "https://pbs.twimg.com/profile_images/1865828164947099648/v0SAw6WI_400x400.jpg",
+        "enabled": true
+      },
+      {
+        "id": "tom",
+        "name": "Tom Friday",
+        "role": "Maker",
+        "text": "I used ShipFree to build my SaaS, and in just two weeks, I had my first MRR. It made everything 10x easier.",
+        "avatar": "https://pbs.twimg.com/profile_images/1845536690988302336/QXKxqVvn_400x400.jpg",
+        "rating": 5,
+        "enabled": true
+      }
+    ],
+    "faq": [
+      {
+        "id": "free",
+        "question": "Is this really free?",
+        "answer": "Yes! ShipFree is open-source and community-driven. Use it for unlimited projects, no strings attached.",
+        "enabled": true
+      },
+      {
+        "id": "requirements",
+        "question": "What do I need to use ShipFree?",
+        "answer": "All you need is a GitHub account to clone the repo and a deployment platform like Vercel or Railway.",
+        "enabled": true
+      },
+      {
+        "id": "customize",
+        "question": "Can I customize it?",
+        "answer": "Built with Next.js, Tailwind, and modern tools, ShipFree is fully extensible.",
+        "enabled": true
+      },
+      {
+        "id": "comparison",
+        "question": "How does it compare to ShipFast?",
+        "answer": "ShipFast is paid; ShipFree gives you similar core features—completely free! Perfect for bootstrappers who want to launch now.",
+        "enabled": true
+      },
+      {
+        "id": "database",
+        "question": "Does ShipFree include a database?",
+        "answer": "Yes! It supports MongoDB and Supabase out of the box.",
+        "enabled": true
+      },
+      {
+        "id": "community",
+        "question": "Is there a community I can join?",
+        "answer": "Yes! We have an active Discord community where founders help each other grow.",
+        "enabled": true
+      },
+      {
+        "id": "help",
+        "question": "What if I need help?",
+        "answer": "We have detailed documentation, video tutorials, and community support to guide you.",
+        "enabled": true
+      },
+      {
+        "id": "contribute",
+        "question": "Can I contribute to ShipFree?",
+        "answer": "ShipFree is open-source—we welcome contributions from developers worldwide.",
+        "enabled": true
+      },
+      {
+        "id": "commercial",
+        "question": "Can I use ShipFree for commercial projects?",
+        "answer": "Yes! You can launch and scale real businesses with ShipFree. No restrictions.",
+        "enabled": true
+      },
+      {
+        "id": "roadmap",
+        "question": "Is there a roadmap for future features?",
+        "answer": "Yes! We're constantly improving ShipFree. Check our GitHub roadmap to see what's coming next.",
+        "enabled": true
+      }
+    ],
+    "cta": {
+      "title": "Ready to Ship Your Idea?",
+      "description": "Join thousands of developers who are building and launching faster with ShipFree",
+      "cta": {
+        "text": "Get Started for Free",
+        "href": "https://github.com/idee8/shipfree"
+      }
+    },
+    "footer": {
+      "tagline": "Built for makers, by makers",
+      "copyright": "Copyright © 2025 - All rights reserved",
+      "links": [
+        {
+          "title": "🚀 Links",
+          "items": [
+            {
+              "label": "Wall of love",
+              "href": "#wall-of-love"
+            },
+            {
+              "label": "Pricing",
+              "href": "#pricing"
+            },
+            {
+              "label": "Twitter",
+              "href": "https://x.com/idee8agency"
+            },
+            {
+              "label": "Docs",
+              "href": "/docs"
+            }
+          ]
+        },
+        {
+          "title": "⚖️ Legal",
+          "items": [
+            {
+              "label": "Privacy Policy",
+              "href": "/privacy-policy"
+            },
+            {
+              "label": "Terms of Service",
+              "href": "/tos"
+            }
+          ]
+        },
+        {
+          "title": "🔧 Resources",
+          "items": [
+            {
+              "label": "GitHub",
+              "href": "https://github.com/idee8/shipfree"
+            },
+            {
+              "label": "Documentation",
+              "href": "/docs"
+            },
+            {
+              "label": "Community",
+              "href": "https://discord.gg/shipfree"
+            }
+          ]
+        }
+      ],
+      "social": {
+        "twitter": "https://x.com/idee8agency",
+        "github": "https://github.com/idee8/shipfree"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "enabled": true,
+      "sections": [
+        {
+          "id": "navbar",
+          "component": "Navbar",
+          "enabled": true,
+          "order": 0
+        },
+        {
+          "id": "hero",
+          "component": "HeroSection",
+          "enabled": true,
+          "order": 1
+        },
+        {
+          "id": "featured-time",
+          "component": "FeaturedTime",
+          "enabled": true,
+          "order": 2
+        },
+        {
+          "id": "maker-intro",
+          "component": "MakerIntro",
+          "enabled": true,
+          "order": 3
+        },
+        {
+          "id": "pricing",
+          "component": "PricingSection",
+          "enabled": true,
+          "order": 4
+        },
+        {
+          "id": "faq",
+          "component": "FAQ",
+          "enabled": true,
+          "order": 5
+        },
+        {
+          "id": "testimonials",
+          "component": "TestimonialsPage",
+          "enabled": true,
+          "order": 6
+        },
+        {
+          "id": "cta",
+          "component": "CTA",
+          "enabled": true,
+          "order": 7
+        },
+        {
+          "id": "footer",
+          "component": "Footer",
+          "enabled": true,
+          "order": 8
+        }
+      ]
+    },
+    "pricing": {
+      "enabled": true
+    },
+    "dashboard": {
+      "enabled": true
+    },
+    "docs": {
+      "enabled": true
+    },
+    "blog": {
+      "enabled": false
+    },
+    "privacyPolicy": {
+      "enabled": true
+    },
+    "termsOfService": {
+      "enabled": true
+    }
+  },
+  "routes": {
+    "home": "/",
+    "pricing": "/#pricing",
+    "dashboard": "/dashboard",
+    "login": "/login",
+    "register": "/register",
+    "docs": "/docs",
+    "blog": "/blog",
+    "privacyPolicy": "/privacy-policy",
+    "termsOfService": "/tos"
+  },
+  "features": {
+    "authentication": {
+      "enabled": true,
+      "providers": {
+        "google": true,
+        "github": false,
+        "magicLink": true
+      }
+    },
+    "payments": {
+      "enabled": true,
+      "providers": {
+        "stripe": true,
+        "lemonSqueezy": true
+      }
+    },
+    "email": {
+      "enabled": true,
+      "provider": "mailgun"
+    },
+    "analytics": {
+      "enabled": false
+    },
+    "blog": {
+      "enabled": false
+    },
+    "docs": {
+      "enabled": true
+    }
+  },
+  "projects": [
+    {
+      "id": "shipfree",
+      "name": "ShipFree",
+      "description": "Open source SaaS boilerplate to launch your startup faster",
+      "image": "/projects/shipfree.png",
+      "url": "https://shipfree.idee8.agency",
+      "github": "https://github.com/idee8/shipfree",
+      "tags": ["saas", "boilerplate", "nextjs"],
+      "featured": true,
+      "enabled": true
+    }
+  ],
+  "products": [
+    {
+      "id": "shipfree-pro",
+      "name": "ShipFree Pro",
+      "description": "Advanced features and priority support",
+      "price": 0,
+      "currency": "USD",
+      "features": [
+        "All Community Edition features",
+        "Priority support",
+        "Advanced templates",
+        "Custom integrations"
+      ],
+      "cta": {
+        "text": "Coming Soon",
+        "href": "#"
+      },
+      "featured": false,
+      "enabled": false
+    }
+  ]
+}
