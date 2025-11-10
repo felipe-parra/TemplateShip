@@ -11,6 +11,27 @@ ShipFree is a free alternative to ShipFast, designed to simplify and optimize yo
 - Stripe and LemonSqueezy integration
 - Email notifications via Mailgun
 - Modern UI built with Next.js and TailwindCSS
+- **🎄 Holiday MVP Generator** - Generate complete landing pages, content plans, and execution plans for seasonal digital products
+
+## 🎄 Holiday MVP Generator
+
+A powerful tool to generate complete marketing assets for seasonal digital products in minutes:
+
+- **Landing Page Specs** (JSON) - Hero, pricing, FAQs, CTAs ready for Next.js
+- **Content Plans** (Markdown) - Detailed deliverables with ready-to-use prompts
+- **Execution Plans** (Markdown) - Weekend schedule with metrics and A/B tests
+
+### Quick Start
+
+```bash
+# Via UI
+Open http://localhost:3000/holiday-mvp
+
+# Via CLI
+node scripts/generate-holiday-mvp.mjs --brand="Your Brand" --products=plantillas,adviento
+```
+
+📚 **Full Documentation**: See [HOLIDAY_MVP_GENERATOR.md](HOLIDAY_MVP_GENERATOR.md) for detailed usage, examples, and customization.
 
 ## Docs
 
