@@ -17,7 +17,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // Validar y normalizar
-    const validation = validateAndNormalizeInput(body as Partial<GeneratorInput>);
+    const validation = validateAndNormalizeInput(
+      body as Partial<GeneratorInput>
+    );
 
     if (!validation.valid) {
       return NextResponse.json(

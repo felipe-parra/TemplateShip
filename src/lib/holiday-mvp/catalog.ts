@@ -32,27 +32,21 @@ export const PRODUCT_CATALOG: Record<ProductId, ProductDefinition> = {
   guia_ventas: {
     id: "guia_ventas",
     title: "Guía: Cerrar el Año con Más Ventas",
-    deliverables: [
-      "Mini-playbook 12 págs + 3 checklists + calendario 10 días",
-    ],
+    deliverables: ["Mini-playbook 12 págs + 3 checklists + calendario 10 días"],
     price_suggested: { MXN: 279, USD: 15 },
     bundleable: true,
   },
   kit_imprimible: {
     id: "kit_imprimible",
     title: "Kit Imprimible de Navidad",
-    deliverables: [
-      "PDF 20 págs: etiquetas, tarjetas, bingo/sopa, listas",
-    ],
+    deliverables: ["PDF 20 págs: etiquetas, tarjetas, bingo/sopa, listas"],
     price_suggested: { MXN: 109, USD: 6 },
     bundleable: true,
   },
   taller_2026: {
     id: "taller_2026",
     title: "Taller en Vivo: Planea tu 2026 con Propósito",
-    deliverables: [
-      "Temario 90 min, workbook simple, plantilla Notion metas",
-    ],
+    deliverables: ["Temario 90 min, workbook simple, plantilla Notion metas"],
     price_suggested: { MXN: 349, USD: 19 },
     bundleable: false,
   },

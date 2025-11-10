@@ -15,12 +15,28 @@ const PRODUCTS = [
   { id: "adviento", name: "Calendario de Adviento Digital", price: "MXN $129" },
   { id: "recetario", name: "Recetario Navideño (ebook)", price: "MXN $159" },
   { id: "plantillas", name: "Pack de Plantillas Navideñas", price: "MXN $219" },
-  { id: "guia_ventas", name: "Guía: Cerrar el Año con Más Ventas", price: "MXN $279" },
-  { id: "kit_imprimible", name: "Kit Imprimible de Navidad", price: "MXN $109" },
+  {
+    id: "guia_ventas",
+    name: "Guía: Cerrar el Año con Más Ventas",
+    price: "MXN $279",
+  },
+  {
+    id: "kit_imprimible",
+    name: "Kit Imprimible de Navidad",
+    price: "MXN $109",
+  },
   { id: "taller_2026", name: "Taller: Planea tu 2026", price: "MXN $349" },
 ] as const;
 
-const CHANNELS = ["X", "Twitter", "IG", "Instagram", "LinkedIn", "Comunidades", "Email"];
+const CHANNELS = [
+  "X",
+  "Twitter",
+  "IG",
+  "Instagram",
+  "LinkedIn",
+  "Comunidades",
+  "Email",
+];
 
 export default function HolidayMVPGenerator() {
   const [loading, setLoading] = useState(false);
@@ -29,27 +45,40 @@ export default function HolidayMVPGenerator() {
 
   // Form state
   const [brandName, setBrandName] = useState("Xilo Labs");
-  const [targetAudience, setTargetAudience] = useState("emprendedores y creadores en MX");
+  const [targetAudience, setTargetAudience] = useState(
+    "emprendedores y creadores en MX"
+  );
   const [toneVoice, setToneVoice] = useState("profesional y festivo");
   const [primaryGoal, setPrimaryGoal] = useState("pre-ventas + 200 leads");
   const [currency, setCurrency] = useState<"MXN" | "USD" | "EUR">("MXN");
   const [locale, setLocale] = useState<"es-MX" | "es-ES" | "en-US">("es-MX");
   const [salesStack, setSalesStack] = useState("Gumroad");
   const [emailStack, setEmailStack] = useState("ConvertKit");
-  const [selectedChannels, setSelectedChannels] = useState<string[]>(["X", "IG", "LinkedIn"]);
-  const [selectedProducts, setSelectedProducts] = useState<string[]>(["plantillas", "adviento"]);
+  const [selectedChannels, setSelectedChannels] = useState<string[]>([
+    "X",
+    "IG",
+    "LinkedIn",
+  ]);
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([
+    "plantillas",
+    "adviento",
+  ]);
   const [brandConstraints, setBrandConstraints] = useState("");
   const [legalNotes, setLegalNotes] = useState("");
 
   const toggleChannel = (channel: string) => {
     setSelectedChannels((prev) =>
-      prev.includes(channel) ? prev.filter((c) => c !== channel) : [...prev, channel]
+      prev.includes(channel)
+        ? prev.filter((c) => c !== channel)
+        : [...prev, channel]
     );
   };
 
   const toggleProduct = (productId: string) => {
     setSelectedProducts((prev) =>
-      prev.includes(productId) ? prev.filter((p) => p !== productId) : [...prev, productId]
+      prev.includes(productId)
+        ? prev.filter((p) => p !== productId)
+        : [...prev, productId]
     );
   };
 
@@ -83,7 +112,9 @@ export default function HolidayMVPGenerator() {
       const data = await response.json();
 
       if (!data.success) {
-        throw new Error(data.errors?.join(", ") || data.error || "Error desconocido");
+        throw new Error(
+          data.errors?.join(", ") || data.error || "Error desconocido"
+        );
       }
 
       setResult(data);
@@ -257,7 +288,9 @@ export default function HolidayMVPGenerator() {
 
         {/* Brand Constraints */}
         <div className="space-y-2">
-          <Label htmlFor="brand_constraints">Constraints de Marca (opcional)</Label>
+          <Label htmlFor="brand_constraints">
+            Constraints de Marca (opcional)
+          </Label>
           <Input
             id="brand_constraints"
             value={brandConstraints}
@@ -304,9 +337,11 @@ export default function HolidayMVPGenerator() {
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-md">
               <h3 className="font-medium mb-2">⚠️ Suposiciones:</h3>
               <ul className="list-disc list-inside space-y-1 text-sm">
-                {result.data.assumptions.map((assumption: string, i: number) => (
-                  <li key={i}>{assumption}</li>
-                ))}
+                {result.data.assumptions.map(
+                  (assumption: string, i: number) => (
+                    <li key={i}>{assumption}</li>
+                  )
+                )}
               </ul>
             </div>
           )}
@@ -315,7 +350,10 @@ export default function HolidayMVPGenerator() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Button
               onClick={() =>
-                downloadFile(result.files.landing_spec_json, "landing_spec.json")
+                downloadFile(
+                  result.files.landing_spec_json,
+                  "landing_spec.json"
+                )
               }
               variant="outline"
               className="w-full"
@@ -333,7 +371,10 @@ export default function HolidayMVPGenerator() {
             </Button>
             <Button
               onClick={() =>
-                downloadFile(result.files.execution_plan_md, "execution_plan.md")
+                downloadFile(
+                  result.files.execution_plan_md,
+                  "execution_plan.md"
+                )
               }
               variant="outline"
               className="w-full"
@@ -356,7 +397,9 @@ export default function HolidayMVPGenerator() {
               <div className="text-2xl font-bold">
                 {result.data.landing_spec.products.length}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Productos</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Productos
+              </div>
             </div>
             <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-md">
               <div className="text-2xl font-bold">

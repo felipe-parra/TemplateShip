@@ -13,10 +13,9 @@ import type {
 /**
  * Genera plan de ejecución completo para fin de semana
  */
-export function generateExecutionPlan(
-  input: GeneratorInput
-): ExecutionPlan {
-  const isHighVolume = input.primary_goal.includes("200") || input.primary_goal.includes("100");
+export function generateExecutionPlan(input: GeneratorInput): ExecutionPlan {
+  const isHighVolume =
+    input.primary_goal.includes("200") || input.primary_goal.includes("100");
 
   return {
     objective: generateObjective(input),
@@ -44,10 +43,7 @@ function generateObjective(input: GeneratorInput): string {
   }
 }
 
-function generateSuccessMetrics(
-  input: GeneratorInput,
-  isHighVolume: boolean
-) {
+function generateSuccessMetrics(input: GeneratorInput, isHighVolume: boolean) {
   // Umbrales base según objetivo
   const baseVisits = isHighVolume ? 500 : 200;
   const baseLeads = isHighVolume ? 200 : 50;
@@ -224,16 +220,15 @@ function generatePublicationChecklist(input: GeneratorInput): string[] {
   ];
 }
 
-function generateDistributionPlan(
-  input: GeneratorInput
-): DistributionAction[] {
+function generateDistributionPlan(input: GeneratorInput): DistributionAction[] {
   const channelMap: Record<
     string,
     { action: string; format: string; priority: "alta" | "media" | "baja" }[]
   > = {
-    "X": [
+    X: [
       {
-        action: "Hilo de lanzamiento (8-10 tweets) con propuesta de valor + link",
+        action:
+          "Hilo de lanzamiento (8-10 tweets) con propuesta de valor + link",
         format: "Thread con imágenes",
         priority: "alta",
       },
@@ -243,16 +238,18 @@ function generateDistributionPlan(
         priority: "media",
       },
     ],
-    "Twitter": [
+    Twitter: [
       {
-        action: "Hilo de lanzamiento (8-10 tweets) con propuesta de valor + link",
+        action:
+          "Hilo de lanzamiento (8-10 tweets) con propuesta de valor + link",
         format: "Thread con imágenes",
         priority: "alta",
       },
     ],
-    "IG": [
+    IG: [
       {
-        action: "Carrusel (10 slides) explicando productos + precio + CTA en bio",
+        action:
+          "Carrusel (10 slides) explicando productos + precio + CTA en bio",
         format: "Carrusel 1:1",
         priority: "alta",
       },
@@ -267,16 +264,18 @@ function generateDistributionPlan(
         priority: "media",
       },
     ],
-    "Instagram": [
+    Instagram: [
       {
-        action: "Carrusel (10 slides) explicando productos + precio + CTA en bio",
+        action:
+          "Carrusel (10 slides) explicando productos + precio + CTA en bio",
         format: "Carrusel 1:1",
         priority: "alta",
       },
     ],
-    "LinkedIn": [
+    LinkedIn: [
       {
-        action: "Post largo (1200 chars) con storytelling + link en comentarios",
+        action:
+          "Post largo (1200 chars) con storytelling + link en comentarios",
         format: "Post + PDF preview",
         priority: "alta",
       },
@@ -286,21 +285,21 @@ function generateDistributionPlan(
         priority: "media",
       },
     ],
-    "Comunidades": [
+    Comunidades: [
       {
         action: "Post en 2 comunidades relevantes (no spam, dar valor primero)",
         format: "Post contextualizado",
         priority: "media",
       },
     ],
-    "Communities": [
+    Communities: [
       {
         action: "Post en 2 comunidades relevantes (no spam, dar valor primero)",
         format: "Post contextualizado",
         priority: "media",
       },
     ],
-    "Email": [
+    Email: [
       {
         action: "Email a lista existente (si hay) anunciando lanzamiento",
         format: "Email HTML",
@@ -312,7 +311,8 @@ function generateDistributionPlan(
   const actions: DistributionAction[] = [];
 
   input.channels.forEach((channel) => {
-    const channelActions = channelMap[channel] || channelMap[channel.toLowerCase()];
+    const channelActions =
+      channelMap[channel] || channelMap[channel.toLowerCase()];
     if (channelActions) {
       channelActions.forEach((action) => {
         actions.push({

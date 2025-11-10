@@ -62,14 +62,14 @@ console.log(files.execution_plan_md);
 
 El generador incluye 6 productos navideños pre-configurados:
 
-| ID | Producto | Precio MXN | Precio USD | Bundleable |
-|----|----------|------------|------------|------------|
-| `adviento` | Calendario de Adviento Digital | $129 | $7 | ✅ |
-| `recetario` | Recetario Navideño (ebook) | $159 | $9 | ✅ |
-| `plantillas` | Pack de Plantillas Navideñas (Canva) | $219 | $12 | ✅ |
-| `guia_ventas` | Guía: Cerrar el Año con Más Ventas | $279 | $15 | ✅ |
-| `kit_imprimible` | Kit Imprimible de Navidad | $109 | $6 | ✅ |
-| `taller_2026` | Taller en Vivo: Planea tu 2026 | $349 | $19 | ❌ |
+| ID               | Producto                             | Precio MXN | Precio USD | Bundleable |
+| ---------------- | ------------------------------------ | ---------- | ---------- | ---------- |
+| `adviento`       | Calendario de Adviento Digital       | $129       | $7         | ✅         |
+| `recetario`      | Recetario Navideño (ebook)           | $159       | $9         | ✅         |
+| `plantillas`     | Pack de Plantillas Navideñas (Canva) | $219       | $12        | ✅         |
+| `guia_ventas`    | Guía: Cerrar el Año con Más Ventas   | $279       | $15        | ✅         |
+| `kit_imprimible` | Kit Imprimible de Navidad            | $109       | $6         | ✅         |
+| `taller_2026`    | Taller en Vivo: Planea tu 2026       | $349       | $19        | ❌         |
 
 ---
 
@@ -161,6 +161,7 @@ Plan de contenido por producto con:
 ## Calendario de Adviento Digital
 
 ### Entregables
+
 - 24 retos diarios (micro-actividades ≤60 palabras)
 - Cada reto con versión normal y easy_variant
 - 3 días de demo (días 1, 2, 3) completamente desarrollados
@@ -171,10 +172,13 @@ Plan de contenido por producto con:
 
 #### Brainstorm Temas
 ```
+
 Actúa como content strategist para emprendedores.
 Genera 24 micro-retos navideños...
 [Prompt completo listo para usar]
+
 ```
+
 ```
 
 ### 3. `execution_plan.md`
@@ -195,15 +199,17 @@ Plan de ejecución de fin de semana con:
 ## 📅 Cronograma Sábado
 
 ### 09:00 - 11:00 (2h) — PM + Content
+
 - Finalizar oferta y pricing de productos
 - Redactar copys principales (hero, value props, FAQ)
 - Validar integración Gumroad + ConvertKit
 - Crear 3 prototipos de productos (demo/preview)
 
 ### 11:00 - 13:00 (2h) — Frontend
+
 - Implementar landing page (componentes base)
 - Integrar pricing table con CTAs funcionales
-...
+  ...
 ```
 
 ---
@@ -238,7 +244,9 @@ import {
   generateExecutionPlan,
 } from "@/lib/holiday-mvp";
 
-const input = { /* ... */ };
+const input = {
+  /* ... */
+};
 
 const landingSpec = generateLandingSpec(input);
 const contentPlan = generateContentPlan(input);
@@ -326,7 +334,7 @@ Edita `brand_constraints` en el input:
 
 ```typescript
 {
-  brand_constraints: "usar paleta rojo (#FF0000), verde (#00FF00), dorado (#FFD700)"
+  brand_constraints: "usar paleta rojo (#FF0000), verde (#00FF00), dorado (#FFD700)";
 }
 ```
 
@@ -339,8 +347,8 @@ Los umbrales se calculan automáticamente basados en `primary_goal`. Para person
 function generateSuccessMetrics(input: GeneratorInput) {
   return {
     visits: 1000, // Custom
-    leads: 300,   // Custom
-    sales: 50,    // Custom
+    leads: 300, // Custom
+    sales: 50, // Custom
   };
 }
 ```
@@ -364,11 +372,11 @@ El generador cumple con:
 
 Basado en `primary_goal: "pre-ventas + 200 leads"`:
 
-| Escenario | Visitas | Leads | Ventas | Decisión |
-|-----------|---------|-------|--------|----------|
-| 🟢 GO | 750+ | 300+ | 20+ | Invertir en ads, escalar |
-| 🟡 MAYBE | 500+ | 200+ | 10+ | Iterar copys, nuevos canales |
-| 🔴 KILL | <250 | <100 | <3 | Pivotar oferta o audiencia |
+| Escenario | Visitas | Leads | Ventas | Decisión                     |
+| --------- | ------- | ----- | ------ | ---------------------------- |
+| 🟢 GO     | 750+    | 300+  | 20+    | Invertir en ads, escalar     |
+| 🟡 MAYBE  | 500+    | 200+  | 10+    | Iterar copys, nuevos canales |
+| 🔴 KILL   | <250    | <100  | <3     | Pivotar oferta o audiencia   |
 
 ---
 
