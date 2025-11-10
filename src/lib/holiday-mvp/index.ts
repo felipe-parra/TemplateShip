@@ -37,9 +37,20 @@ export type {
 } from "./types";
 
 // Catalog
-export { PRODUCT_CATALOG, isValidProductId, getBundleableProducts, calculateBundlePrice } from "./catalog";
+export {
+  PRODUCT_CATALOG,
+  isValidProductId,
+  getBundleableProducts,
+  calculateBundlePrice,
+} from "./catalog";
 
 // Individual generators (for advanced usage)
 export { generateLandingSpec } from "./generators/landing-spec";
-export { generateContentPlan, contentPlanToMarkdown } from "./generators/content-plan";
-export { generateExecutionPlan, executionPlanToMarkdown } from "./generators/execution-plan";
+export {
+  generateContentPlan,
+  contentPlanToMarkdown,
+} from "./generators/content-plan";
+export {
+  generateExecutionPlan,
+  executionPlanToMarkdown,
+} from "./generators/execution-plan";

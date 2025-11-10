@@ -17,9 +17,11 @@ import {
 /**
  * Valida y normaliza el input del generador
  */
-export function validateAndNormalizeInput(
-  input: Partial<GeneratorInput>
-): { valid: boolean; input?: GeneratorInput; errors?: string[] } {
+export function validateAndNormalizeInput(input: Partial<GeneratorInput>): {
+  valid: boolean;
+  input?: GeneratorInput;
+  errors?: string[];
+} {
   const errors: string[] = [];
 
   // Campos requeridos
@@ -37,7 +39,8 @@ export function validateAndNormalizeInput(
   // Aplicar defaults
   const normalized: GeneratorInput = {
     brand_name: input.brand_name!,
-    target_audience: input.target_audience || "emprendedores y creadores digitales",
+    target_audience:
+      input.target_audience || "emprendedores y creadores digitales",
     tone_voice: input.tone_voice || "profesional y cercano",
     primary_goal: input.primary_goal || "pre-ventas + captar 100 leads",
     currency: input.currency || "MXN",
@@ -56,9 +59,7 @@ export function validateAndNormalizeInput(
 /**
  * Genera todos los artefactos del Holiday MVP Generator
  */
-export function generateHolidayMVP(
-  input: GeneratorInput
-): GeneratorOutput {
+export function generateHolidayMVP(input: GeneratorInput): GeneratorOutput {
   const assumptions: string[] = [];
 
   // Documentar suposiciones
@@ -135,7 +136,14 @@ export function exportArtifacts(output: GeneratorOutput): {
  */
 export function quickGenerate(
   brandName: string,
-  products: Array<"adviento" | "recetario" | "plantillas" | "guia_ventas" | "kit_imprimible" | "taller_2026">
+  products: Array<
+    | "adviento"
+    | "recetario"
+    | "plantillas"
+    | "guia_ventas"
+    | "kit_imprimible"
+    | "taller_2026"
+  >
 ): GeneratorOutput {
   const input: GeneratorInput = {
     brand_name: brandName,

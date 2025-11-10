@@ -6,7 +6,13 @@
 
 export type Currency = "MXN" | "USD" | "EUR";
 export type Locale = "es-MX" | "es-ES" | "en-US";
-export type ProductId = "adviento" | "recetario" | "plantillas" | "guia_ventas" | "kit_imprimible" | "taller_2026";
+export type ProductId =
+  | "adviento"
+  | "recetario"
+  | "plantillas"
+  | "guia_ventas"
+  | "kit_imprimible"
+  | "taller_2026";
 
 export interface PriceMap {
   MXN?: number;

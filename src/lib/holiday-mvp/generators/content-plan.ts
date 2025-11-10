@@ -26,7 +26,9 @@ function generateProductContentPlan(
 
   const generators: Record<
     ProductId,
-    (input: GeneratorInput) => Omit<ContentPlanItem, "product_id" | "product_title">
+    (
+      input: GeneratorInput
+    ) => Omit<ContentPlanItem, "product_id" | "product_title">
   > = {
     adviento: generateAdvientoContent,
     recetario: generateRecetarioContent,
@@ -637,7 +639,7 @@ Cabe en 1 página carta.
 `,
     },
     acceptance_criteria: [
-      "20 páginas imprimibles en papel carta (8.5x11\")",
+      '20 páginas imprimibles en papel carta (8.5x11")',
       "Alta calidad (300dpi) para impresión casera",
       "Versión color + versión B/N para colorear",
       "Instrucciones de uso claras (1 página)",

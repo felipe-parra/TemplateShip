@@ -23,11 +23,12 @@ export function generateLandingSpec(input: GeneratorInput): LandingSpec {
 
   // Validar y usar defaults
   const tone = input.tone_voice || "profesional y cercano";
-  const goal = input.primary_goal || "pre-ventas";
   const baseUrl = "https://tudominio.com"; // TODO: configurar
 
   if (!input.brand_constraints) {
-    assumptions.push("No se especificaron constraints de marca, usando paleta navideña estándar");
+    assumptions.push(
+      "No se especificaron constraints de marca, usando paleta navideña estándar"
+    );
   }
 
   return {
@@ -70,8 +71,8 @@ function generateHero(input: GeneratorInput, baseUrl: string) {
   const headline = isSales
     ? headlines.sales
     : isLeads
-    ? headlines.leads
-    : headlines.default;
+      ? headlines.leads
+      : headlines.default;
 
   return {
     headline,
@@ -137,10 +138,7 @@ function generateHowItWorks(input: GeneratorInput): HowItWorksStep[] {
   ];
 }
 
-function generateProducts(
-  input: GeneratorInput,
-  baseUrl: string
-): Product[] {
+function generateProducts(input: GeneratorInput, baseUrl: string): Product[] {
   return input.products_to_include.map((productId) => {
     const catalog = PRODUCT_CATALOG[productId];
     const price = catalog.price_suggested[input.currency] || 0;
@@ -215,7 +213,10 @@ function generateProductBullets(
   return bullets[productId] || deliverables;
 }
 
-function generatePricingTable(input: GeneratorInput, baseUrl: string): {
+function generatePricingTable(
+  input: GeneratorInput,
+  baseUrl: string
+): {
   skus: SKU[];
   notes: string;
 } {
@@ -252,7 +253,9 @@ function generatePricingTable(input: GeneratorInput, baseUrl: string): {
 
   return {
     skus,
-    notes: input.legal_notes || "Pago seguro. Descarga inmediata. Garantía de 7 días si no has descargado.",
+    notes:
+      input.legal_notes ||
+      "Pago seguro. Descarga inmediata. Garantía de 7 días si no has descargado.",
   };
 }
 
@@ -266,7 +269,8 @@ function generateFAQ(input: GeneratorInput): FAQ[] {
     },
     {
       q: "¿Puedo usar estos productos comercialmente?",
-      a: input.legal_notes ||
+      a:
+        input.legal_notes ||
         "Sí, todos los productos incluyen licencia de uso comercial. Puedes revenderlos, regalarlos o usarlos en tu negocio.",
     },
     {
@@ -293,7 +297,8 @@ function generateTestimonials(input: GeneratorInput) {
   // Templates genéricos - en producción real estos vendrían de una DB
   return [
     {
-      quote: "Exactamente lo que necesitaba para cerrar el año con contenido de calidad. ¡Súper recomendado!",
+      quote:
+        "Exactamente lo que necesitaba para cerrar el año con contenido de calidad. ¡Súper recomendado!",
       author: "María G., Content Creator",
     },
     {

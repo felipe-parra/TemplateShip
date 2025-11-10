@@ -59,9 +59,15 @@ const example2 = generateHolidayMVP(input2);
 
 console.log("✅ Generado para DigitalBiz México");
 console.log("\n📊 Métricas de éxito (72h):");
-console.log(`  Visitas objetivo: ${example2.execution_plan.success_metrics.visits}`);
-console.log(`  Leads objetivo: ${example2.execution_plan.success_metrics.leads}`);
-console.log(`  Ventas objetivo: ${example2.execution_plan.success_metrics.sales}`);
+console.log(
+  `  Visitas objetivo: ${example2.execution_plan.success_metrics.visits}`
+);
+console.log(
+  `  Leads objetivo: ${example2.execution_plan.success_metrics.leads}`
+);
+console.log(
+  `  Ventas objetivo: ${example2.execution_plan.success_metrics.sales}`
+);
 
 console.log("\n⚠️ Suposiciones:");
 if (example2.assumptions.length === 0) {
@@ -206,9 +212,7 @@ console.log(
 console.log(
   `  Variante B: "${example6.execution_plan.experiments.ab_test.variant_b}"`
 );
-console.log(
-  `  Métrica: ${example6.execution_plan.experiments.ab_test.metric}`
-);
+console.log(`  Métrica: ${example6.execution_plan.experiments.ab_test.metric}`);
 
 console.log("\n📊 Umbrales de decisión:");
 console.log(
@@ -238,9 +242,7 @@ function calculateSavings(
 // EXPORTAR EJEMPLO COMPLETO
 // ============================================================
 
-console.log(
-  "\n\n=== Para exportar archivos en tu aplicación ===\n"
-);
+console.log("\n\n=== Para exportar archivos en tu aplicación ===\n");
 console.log(`
 import { exportArtifacts } from '@/lib/holiday-mvp';
 import fs from 'fs';
