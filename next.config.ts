@@ -1,9 +1,8 @@
 import { NextConfig } from "next";
 
 const nextConfig = {
-  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ["tsx", "mdx"],
+  pageExtensions: ["ts", "tsx", "mdx"],
   async headers() {
     return [
       {

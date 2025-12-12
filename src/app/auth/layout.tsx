@@ -1,8 +1,12 @@
-import AccountForm from "./account-form";
 import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
-export default async function Dashboard() {
+export default async function AuthLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const cookieStore = await cookies();
   const supabase = await createClient(cookieStore);
 
@@ -10,5 +14,9 @@ export default async function Dashboard() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  return <AccountForm user={user} />;
+  if (user) {
+    redirect("/dashboard");
+  }
+
+  return <>{children}</>;
 }
